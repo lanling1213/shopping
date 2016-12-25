@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--购物车</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/swiper.min.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+    <style type="text/css">
+        .productImg img {
+            width: 61px;
+            height: 61px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="con">
+    <!-- 顶部面板 -->
+    <div class="row panel panel-default">
+        <div class="panel-heading col-sm-12 col-xs-12 col-md-12"
+             style="padding-left: 20px;padding-right: 20px;padding-bottom: 5px;padding-top: 10px;">
+            <div class="col-sm-2 col-xs-2 col-md-2"></div>
+            <div class="col-sm-8 col-xs-8 col-md-8" style="text-align: center;"><h3 class="panel-title">购物车</h3></div>
+            <div class="col-sm-1 col-xs-1 col-md-1"><span onclick="javascript:showNav();"
+                                                          class="glyphicon glyphicon-align-left"></span></div>
+        </div>
+        <!-- 隐藏域 -->
+        <div id="topNav" class="panel-heading col-sm-12 col-xs-12 col-md-12"
+             style="padding-top: 0; display: none; padding-bottom: 0; padding-left: 0;">
+            <nav class="ect-nav" style="height: 5em;">
+                <ul class="ect-diaplay-box text-center nav nav-pills">
+                    <li role="presentation" class="ect-box-flex"><a href="index.html"><i class="ect-icon ect-icon-home"><span
+                            class="ect-icon glyphicon glyphicon-home" style="font-size: 24px;"></span></i>首页</a></li>
+                    <li role="presentation" class="ect-box-flex"><a href="category.html"><i
+                            class="ect-icon ect-icon-cate"><span class="ect-icon glyphicon glyphicon-th-list"
+                                                                 style="font-size: 24px;"></span></i>分类</a></li>
+                    <li role="presentation" class="ect-box-flex"><a href="shoppingCart.html"><i
+                            class="ect-icon ect-icon-flow"><span class="ect-icon glyphicon glyphicon-shopping-cart"
+                                                                 style="font-size: 24px;"></span></i>购物车</a></li>
+                    <li role="presentation" class="ect-box-flex"><a href="home.html"><i
+                            class="ect-icon ect-icon-user"><span class="ect-icon glyphicon glyphicon-user"
+                                                                 style="font-size: 24px;"></span></i>个人中心</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 购物车有产品 -->
+    <div style="display: block;" id="notEmptyCart">
+        <!-- 商品列表 -->
+        <!-- 建议以此<div>为模板循环遍历 -->
+        <div class="panel panel-default">
+            <div class="row panel-default" style="margin-top: 10px; margin-bottom: 10px;">
+                <!-- 复选框 -->
+                <div class="col-sm-1 col-xs-1 col-md-1" style="padding-left: 23px; padding-top: 21px;">
+                    <label>
+                        <input type="checkbox" value="" class="product">
+                    </label>
+                </div>
+                <!-- 商品图片 -->
+                <div class="productImg col-sm-2 col-xs-2 col-md-2"><img src="images/462539504.jpeg"/></div>
+
+                <div class="col-sm-6 col-xs-6 col-md-6" style="padding-left: 20px;">
+                    <!-- 商品名称 -->
+                    <div class="productName_2" style="font-size: 12px; height: 34px;">虽然不总是必须，但是某些时候你可能需要将某些 DOM
+                        内容放到一个盒子里。对于这种情况，可以试试面板组件。
+                    </div>
+                    <!-- 商品数量 -->
+                    <div>
+                        <span class="pull-left" style="padding-top: 5px;">数量：</span>
+
+                        <div class="input-group pull-left wrap" style="width: 7.2em;">
+                            <span class="input-group-addon sup" onclick="subProductNum('product_id_1');">-</span>
+                            <input type="text" class="form-contro form-num" name="number" id="product_id_1"
+                                   autocomplete="off" value="1" onfocus="back_goods_number()" readonly="true">
+                            <span class="input-group-addon plus" onclick="addProductNum('product_id_1');">+</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 商品单价 -->
+                <div class="col-sm-2 col-xs-2 col-md-2">
+                    <div>¥<span id="product_id_1_price">30.00</span></div>
+                    <div style="padding-top: 20px;"><span class="glyphicon glyphicon-trash"></span></div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="row panel-default" style="margin-top: 10px; margin-bottom: 10px;">
+                <div class="col-sm-1 col-xs-1 col-md-1" style="padding-left: 23px; padding-top: 21px;">
+                    <label>
+                        <input type="checkbox" value="" class="product">
+                    </label>
+                </div>
+                <div class="productImg col-sm-2 col-xs-2 col-md-2"><img src="images/462539504.jpeg"/></div>
+                <div class="col-sm-6 col-xs-6 col-md-6" style="padding-left: 20px;">
+                    <div style="height:35px;">商品名称</div>
+                    <div>
+                        <span class="pull-left" style="padding-top: 5px;">数量：</span>
+
+                        <div class="input-group pull-left wrap" style="width: 7.2em;">
+                            <span class="input-group-addon sup" onclick="subProductNum('product_id_2');">-</span>
+                            <input type="text" class="form-contro form-num" name="number" id="product_id_2"
+                                   autocomplete="off" value="1" onfocus="back_goods_number()" readonly="true">
+                            <span class="input-group-addon plus" onclick="addProductNum('product_id_2');">+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-2 col-md-2">
+                    <div>¥<span id="product_id_2_price">30.00</span></div>
+                    <div style="padding-top: 20px;"><a href="#"><span class="glyphicon glyphicon-trash"></span></a></div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+
+
+        <!-- 底部悬浮栏 -->
+        <div>
+            <footer>
+                <nav class="ect-nav">
+                    <ul class="ect-diaplay-box text-center row">
+                        <div style="padding-left: 1em; padding-top: 1.2em;" class="col-xs-3 col-sm-3 col-md-3"><label><input
+                                id="chooseAll" name="optionsRadios" type="radio" value="0"
+                                onclick="javascript:chooseAll();">全选</label></div>
+                        <div style="padding-left: 1em; padding-top: 1.2em;" class="col-xs-6 col-sm-6 col-md-6">总计：<span
+                                id="orderMoney"
+                                style="color: red; font-weight: 700;">¥9999999.00</span><br><span>（不含运费）</span></div>
+                        <div style="padding-left: 1em; padding-top: 1.2em;" class="col-xs-2 col-sm-2 col-md-2"><a
+                                class="btn btn-danger active" href="#" role="button">结算</a></div>
+                    </ul>
+                </nav>
+            </footer>
+            <div style="padding-bottom:4.2em;"></div>
+        </div>
+    </div>
+
+    <!-- 购物车没产品 -->
+    <div class="con" id="emptyCart" style="display: none;">
+        <!--  -->
+        <div class="text-center" style="padding-top: 50px;">
+            <div><span class="glyphicon glyphicon-shopping-cart" style="font-size: 80px;"></span></div><br>
+            <p class="text-muted"><span>购物车还是空的，去挑几件吧。</span></p><br>
+            <a href="#" class="btn btn-danger" style="width: 120px;"><span style="color: white;">逛一逛</span></a>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="common/js/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.json.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+<script type="text/javascript" src="common/js/jquery.more.js"></script>
+<script type="text/javascript" src="common/js/utils.js"></script>
+<script src="themes/default/js/TouchSlide.1.1.js"></script>
+<script src="themes/default/js/ectouch.js"></script>
+<script src="themes/default/js/simple-inheritance.min.js"></script>
+<script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+<script src="common/bootstrap/js/bootstrap.min.js"></script>
+<script src="themes/default/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript" src="common/js/validform.js"></script>
+<script language="javascript">
+    $(function () {
+
+    });
+
+    <!-- 修改商品数量 -->
+    function changePrice(type) {
+        var qty = $("#goods_number").val();
+        if (type == 1) {
+            qty--;
+        }
+        if (type == 3) {
+            qty++;
+        }
+        if (qty <= 0) {
+            qty = 1;
+        }
+        if (!/^[0-9]*$/.test(qty)) {
+            qty = $("#back_number").value;
+        }
+        document.getElementById('goods_number').value = qty;
+    }
+    function addProductNum(num) {
+        var qty = $("#" + num).val();
+        qty++;
+        if (!/^[0-9]*$/.test(qty)) {
+            qty = $("#back_number").value;
+        }
+        document.getElementById(num).value = qty;
+    }
+    function subProductNum(num) {
+        var qty = $("#" + num).val();
+        if (qty == 1) {
+            alert("已经是最小值了。");
+        } else {
+            qty--;
+            document.getElementById(num).value = qty;
+        }
+    }
+
+
+    <!-- 显示顶部悬浮栏 -->
+    function showNav() {
+        if ($("#topNav").is(":hidden")) {
+            $("#topNav").show();
+        } else {
+            $("#topNav").hide();
+        }
+    }
+
+    <!-- 全选事件 -->
+    function chooseAll() {
+        if ($("#chooseAll").val() == 0) {
+            $("#chooseAll").val(1);
+            $(".product").each(function () {
+                if (this.checked == " ") {
+                    this.checked = "checked";
+                }
+            });
+        } else {
+            $("#chooseAll").val(0);
+            $("#chooseAll").removeAttr("checked");
+            $(".product").removeAttr("checked");
+        }
+    }
+
+</script>
+</body>
+</html>

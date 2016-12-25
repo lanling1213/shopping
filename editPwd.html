@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--修改登录密码</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/swiper.min.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+
+    <script type="text/javascript" src="common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="common/js/jquery.json.js"></script>
+    <script type="text/javascript" src="common/js/common.js"></script>
+    <script type="text/javascript" src="common/js/jquery.more.js"></script>
+    <script type="text/javascript" src="common/js/utils.js"></script>
+    <script src="themes/default/js/TouchSlide.1.1.js"></script>
+    <script src="themes/default/js/ectouch.js"></script>
+    <script src="themes/default/js/simple-inheritance.min.js"></script>
+    <script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+    <script src="common/bootstrap/js/bootstrap.min.js"></script>
+    <script src="themes/default/js/jquery.scrollUp.min.js"></script>
+    <script type="text/javascript" src="common/js/validform.js"></script>
+    <script src="common/bootstrap/js/bootstrapValidator.js"></script>
+
+    <style type="text/css" media="all">
+
+    </style>
+</head>
+<body>
+<div class="con">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="text-align: center;"><p><h4>修改登录密码</h4></p></div>
+        <div class="panel-body">
+            <form id="editForm">
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="请输入登录密码" name="pwd">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="npwd" placeholder="请输入新密码" name="npwd">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="rnpwd" placeholder="请再次输入新密码" name="rnpwd">
+                </div>
+                <button type="submit" class="btn btn-default btn-block">修改</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#editForm').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                pwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '密码不能为空'
+                        }
+                    }
+                },
+                npwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '登录密码不能为空'
+                        },
+                        identical: {
+                            field: 'rnpwd',
+                            message: '密码与重复密码不一致'
+                        }
+                    }
+                },
+                rnpwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '重复密码不能为空'
+                        },
+                        identical: {
+                            field: 'npwd',
+                            message: '密码与重复密码不一致'
+                        }
+                    }
+                }
+
+            }
+        });
+    });
+</script>
+</body>
+</html>

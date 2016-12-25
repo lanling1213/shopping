@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--注册</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/swiper.min.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+
+    <script type="text/javascript" src="common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="common/js/jquery.json.js"></script>
+    <script type="text/javascript" src="common/js/common.js"></script>
+    <script type="text/javascript" src="common/js/jquery.more.js"></script>
+    <script type="text/javascript" src="common/js/utils.js"></script>
+    <script src="themes/default/js/TouchSlide.1.1.js"></script>
+    <script src="themes/default/js/ectouch.js"></script>
+    <script src="themes/default/js/simple-inheritance.min.js"></script>
+    <script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+    <script src="common/bootstrap/js/bootstrap.min.js"></script>
+    <script src="themes/default/js/jquery.scrollUp.min.js"></script>
+    <script type="text/javascript" src="common/js/validform.js"></script>
+    <script src="common/bootstrap/js/bootstrapValidator.js"></script>
+</head>
+<body>
+<div class="con">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="text-align: center;"><p><h4>注册</h4></p></div>
+        <div class="panel-body">
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="username">昵称</label>
+                    <input type="text" class="form-control" id="username" placeholder="请输入昵称" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="phone">手机号</label>
+                    <input type="text" class="form-control" id="phone" placeholder="请输入手机号" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">登录密码</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="请输入登录密码" name="pwd">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="rpwd" placeholder="请再一次输入登录密码" name="rpwd">
+                </div>
+                <div class="form-group">
+                    <label for="zpwd">支付密码</label>
+                    <input type="password" class="form-control" id="zpwd" placeholder="请输入支付密码" name="zpwd">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="rzpwd" placeholder="请再一次输入支付密码" name="rzpwd">
+                </div>
+                <div class="form-group">
+                    <label for="RecommendMId">推荐商家ID</label>
+                    <input type="text" class="form-control" id="RecommendMId" placeholder="请输入推荐商家ID"
+                           name="RecommendMId">
+                </div>
+                <div class="form-group">
+                    <label for="userID">推荐用户ID</label>
+                    <input type="text" class="form-control" id="userID" placeholder="请输入推荐用户ID" name="userID">
+                </div>
+                <div class="form-group">
+                    <label for="Name">真实姓名</label>
+                    <input type="text" class="form-control" id="Name" placeholder="请输入真实姓名" name="Name">
+                </div>
+                <div class="form-group">
+                    <label for="cid">身份证号</label>
+                    <input type="text" class="form-control" id="cid" placeholder="请输入身份证号" name="cid">
+                </div>
+                <button type="submit" class="btn btn-default btn-block">注册</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#registerForm').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    message: 'The username is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: '昵称不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: '请输入6到30个字符'
+                        }
+                    }
+                },
+                phone: {
+                    validators: {
+                        notEmpty: {
+                            message: '手机号不能为空'
+                        },
+                        digits: {
+                            message: '手机号只能为数字'
+                        }
+                    }
+                },
+                pwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '登录密码不能为空'
+                        },
+                        identical: {
+                            field: 'rpwd',
+                            message: '密码与重复密码不一致'
+                        },
+                        different: {
+                            field: 'username',
+                            message: '密码不能与用户名相同'
+                        }
+                    }
+                },
+                rpwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '重复密码不能为空'
+                        },
+                        identical: {
+                            field: 'pwd',
+                            message: '密码与重复密码不一致'
+                        },
+                        different: {
+                            field: 'username',
+                            message: '密码不能与用户名相同'
+                        }
+                    }
+                },
+                zpwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '支付密码不能为空'
+                        },
+                        identical: {
+                            field: 'rzpwd',
+                            message: '密码与重复密码不一致'
+                        }
+                    }
+                },
+                rzpwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '重复密码不能为空'
+                        },
+                        identical: {
+                            field: 'zpwd',
+                            message: '密码与重复密码不一致'
+                        },
+                        different: {
+                            field: 'username',
+                            message: '密码不能与用户名相同'
+                        }
+                    }
+                },
+                Name: {
+                    message: 'The Name is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: '姓名不能为空'
+                        }
+                    }
+                },
+                cid: {
+                    message: 'The cid is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: '身份证号不能为空'
+                        },
+                        regexp: {
+                            regexp: /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/,
+                            message: '请输入正确的身份证号'
+                        }
+                    }
+                },
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--产品评价</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/swiper.min.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+    <link rel="stylesheet" href="themes/default/css/application.css">
+
+    <script type="text/javascript" src="common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="common/js/jquery.json.js"></script>
+    <script type="text/javascript" src="common/js/common.js"></script>
+    <script type="text/javascript" src="common/js/jquery.more.js"></script>
+    <script type="text/javascript" src="common/js/utils.js"></script>
+    <script src="themes/default/js/TouchSlide.1.1.js"></script>
+    <script src="themes/default/js/ectouch.js"></script>
+    <script src="themes/default/js/simple-inheritance.min.js"></script>
+    <script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+    <script src="common/bootstrap/js/bootstrap.min.js"></script>
+    <script src="themes/default/js/jquery.scrollUp.min.js"></script>
+    <script type="text/javascript" src="common/js/validform.js"></script>
+    <script src="common/bootstrap/js/bootstrapValidator.js"></script>
+    <script src="themes/default/js/jquery.raty.min.js"></script>
+
+    <style type="text/css" media="all">
+        .productImg img{
+            width: 81px;
+            height: 81px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+
+    </script>
+</head>
+<body>
+<div class="con">
+    <!-- 标题栏 -->
+    <div class="panel panel-default">
+        <div class="panel-heading" style="text-align: center;"><p><h4>产品评价</h4></p></div>
+        <div class="panel-body">
+            <!-- 产品信息 -->
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4 productImg"><img src="images/462547394.jpeg" /></div>
+                <div class="col-md-8 col-sm-8 col-xs-8 productName_3"><span>产品名称</span></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 评价面板 -->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form method="post">
+                <div class="ect-margin-tb row">
+                    <div class="col-md-7 col-sm-7 col-xs-7"><span>物美价廉：</span><span id="favorablestar"></span></div>
+                    <div class="col-md-2 col-sm-2 col-xs-2"><span id="favorablehint"></span></div>
+                </div>
+                <div class="ect-margin-tb row">
+                    <div class="col-md-7 col-sm-7 col-xs-7"><span>产品质量：</span><span id="qualitystar"></span></div>
+                    <div class="col-md-2 col-sm-2 col-xs-2"><span id="qualityhint"></span></div>
+                </div>
+                <div class="ect-margin-tb"><textarea class="form-control" rows="4" name="message"></textarea></div>
+                <button type="submit" class="btn btn-danger btn-block">评价</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(function(){
+        $('#favorablestar').raty({
+            target    : '#favorablehint',
+            targetKeep: true,
+            hints: ['1分', '2分', '3分', '4分', '5分'],
+            starOn: 'images/star-on.png',
+            starOff: 'images/star-off.png',
+            width: 'undefined',
+            scoreName: 'favorable'/*传到后台的变量，相当于name*/
+        });
+        $('#qualitystar').raty({
+            target    : '#qualityhint',
+            targetKeep: true,
+            hints: ['1分', '2分', '3分', '4分', '5分'],
+            starOn: 'images/star-on.png',
+            starOff: 'images/star-off.png',
+            width: 'undefined',
+            scoreName: 'quality'/*传到后台的变量，相当于name*/
+        });
+    });
+</script>
+</body>
+</html>
+

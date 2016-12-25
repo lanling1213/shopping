@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--订单详情</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/swiper.min.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+
+    <script type="text/javascript" src="common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="common/js/jquery.json.js"></script>
+    <script type="text/javascript" src="common/js/common.js"></script>
+    <script type="text/javascript" src="common/js/jquery.more.js"></script>
+    <script type="text/javascript" src="common/js/utils.js"></script>
+    <script src="themes/default/js/TouchSlide.1.1.js"></script>
+    <script src="themes/default/js/ectouch.js"></script>
+    <script src="themes/default/js/simple-inheritance.min.js"></script>
+    <script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+    <script src="common/bootstrap/js/bootstrap.min.js"></script>
+    <script src="themes/default/js/jquery.scrollUp.min.js"></script>
+    <script type="text/javascript" src="common/js/validform.js"></script>
+    <script src="common/bootstrap/js/bootstrapValidator.js"></script>
+
+    <style type="text/css" media="all">
+        .productImg img {
+            width: 61px;
+            height: 61px;
+        }
+
+        hr {
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="con">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="text-align: center;"><p><h4>订单详情</h4></p></div>
+        <ul class="list-group text-muted" style="font-size: 14px;">
+            <!-- 订单信息 -->
+            <li class="list-group-item">
+                <div>
+                    <p>订单编号：<span>123456789</span></p>
+
+                    <p>订单金额：¥ <span style="color: red;">99999.99</span></p>
+
+                    <p>订单日期：<span>2015-10-10 10:42:12</span></p>
+                </div>
+            </li>
+
+            <!-- 物流信息 -->
+            <li class="list-group-item">
+                <div>
+                    <div><span>顺丰快递</span></div>
+                    <div>快递单号：<span>123456789</span></div>
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 col-md-6">快递运输情况</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- 收货地址 -->
+            <li class="list-group-item">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-3 col-md-3"><span>张三</span></div>
+                        <div class="col-sm-6 col-xs-6 col-md-6 col-sm-offset-3 col-xs-offset-3 col-md-offset-3"><span>13711111111</span>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div><p>广东省深圳市</p></div>
+                </div>
+            </li>
+
+            <!-- 商品列表 -->
+            <li class="list-group-item">
+                <div class="row">
+                    <!-- 图片 -->
+                    <div class="productImg col-sm-3 col-xs-3 col-md-3">
+                        <img src="images/462889972.png"/>
+                    </div>
+                    <!-- 产品名称 -->
+                    <div class="productName_3 col-sm-6 col-xs-6 col-md-6">
+                        <p>Bootstrap 让前端开发更快速、简单。所有开发者都能快速上手、所有设备都可以适配、所有项目都适用。</p>
+                    </div>
+                    <!-- 金额、数量 -->
+                    <div style="padding-left: 0;" class="col-sm-3 col-xs-3 col-md-3 text-right">
+                        <!-- 金额 -->
+                        <div><p><strong>¥<span style="color: red;">999999.99</span></strong></p></div>
+                        <!-- 数量 -->
+                        <div class="small"><p><span>x3</span></p></div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <!-- 图片 -->
+                    <div class="productImg col-sm-3 col-xs-3 col-md-3">
+                        <img src="images/462889972.png"/>
+                    </div>
+                    <!-- 产品名称 -->
+                    <div class="productName_3 col-sm-6 col-xs-6 col-md-6">
+                        <p>Bootstrap 让前端开发更快速、简单。所有开发者都能快速上手、所有设备都可以适配、所有项目都适用。</p>
+                    </div>
+                    <!-- 金额、数量 -->
+                    <div style="padding-left: 0;" class="col-sm-3 col-xs-3 col-md-3 text-right">
+                        <!-- 金额 -->
+                        <div><p><strong>¥<span style="color: red;">999999.99</span></strong></p></div>
+                        <!-- 数量 -->
+                        <div class="small"><p><span>x3</span></p></div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- 支付信息 -->
+            <li class="list-group-item">
+                <div>
+                    <p>支付编号：<span>123456789</span></p>
+
+                    <p>支付方式：<span>微信支付</span></p>
+
+                    <p>支付金额：¥<span style="color: red;">99999.99</span></p>
+
+                    <p>创建时间：<span>2015-10-10 16:37:30</span></p>
+
+                    <p>确定时间：<span>2015-10-10 16:38:58</span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 底部悬浮 -->
+<div class="navbar-fixed-bottom" style="display: none">
+    <div class="con">
+        <div class="row" style="padding-top: 5px;">
+            <div class="panel panel-default" style="margin-bottom: 0;">
+                <div class="panel-body">
+                    <div class="col-sm-12 col-xs-12 col-md-12">
+                        <!-- 待收货 -->
+                        <button type="button" class="btn btn-default btn-block btn-warning">查看物流</button>
+                        <button type="button" class="btn btn-default btn-block btn-danger">确认收货</button>
+                        <!-- 已完成交易 -->
+                        <button type="button" class="btn btn-default btn-block btn-warning">评价</button>
+                        <button type="button" class="btn btn-default btn-block btn-warning" disabled="disabled">已评价
+                        </button>
+                        <!-- 未付款 -->
+                        <button type="button" class="btn btn-default btn-block btn-success">去付款</button>
+                        <button type="button" class="btn btn-default btn-block btn-danger">取消订单</button>
+                        <!-- 已取消 -->
+                        <button type="button" class="btn btn-default btn-block" disabled="disabled">订单已取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+</script>
+</body>
+</html>

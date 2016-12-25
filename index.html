@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--首页</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/swiper.min.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+    <style type="text/css" media="all">
+        .swiper-container {
+            width: 100%;
+            height: 170px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-container img {
+            width: 100%;
+            height: 170px;
+        }
+
+        .hot-recommended {
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        .hot-recommended img {
+            width: 100%;
+            height: 170px;
+        }
+
+        .thumbnail{
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="con">
+    <!-- 顶部搜索框 -->
+    <div class="row">
+        <div class="input-group col-sm-12 col-xs-12 col-md-12"
+             style="padding-left: 20px;padding-right: 20px;padding-bottom: 5px;padding-top: 5px;">
+            <span class="input-group-addon" id="basic-addon1" onclick="javascript:toCategory();"><span
+                    class="glyphicon glyphicon-th-list"></span></span>
+            <input type="text" class="form-control" onClick="javascript:openSearch();" placeholder="Search"
+                   aria-describedby="basic-addon1">
+        </div>
+    </div>
+
+    <!-- Swiper幻灯片 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/462487379.jpeg"/></div>
+            <div class="swiper-slide"><img src="images/462488333.jpeg"/></div>
+            <div class="swiper-slide"><img src="images/462491482.jpeg"/></div>
+            <div class="swiper-slide"><img src="images/462513944.jpeg"/></div>
+            <div class="swiper-slide"><img src="images/462691973.jpeg"/></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- 推广栏 -->
+    <!-- <div style="text-align: center;padding: 5px 0 18px;"><img src="images/462779837.jpeg" style="width:68%" /></div> -->
+
+    <!--  -->
+    <nav class="container-fluid">
+        <ul class="row ect-row-nav">
+            <a href="index.php?m=default&amp;c=brand">
+                <li class="col-sm-3 col-xs-3 col-md-3"><i style=" text-align: center;"><span
+                        class="glyphicon glyphicon-th-list" style="font-size: 30px;"></span></i>
+
+                    <p class="text-center">商品分类</p>
+                </li>
+            </a>
+            <a href="#">
+                <li class="col-sm-3 col-xs-3 col-md-3"><i style=" text-align: center;"><span
+                        class="glyphicon glyphicon-list-alt" style="font-size: 30px;"></span></i>
+
+                    <p class="text-center">我的订单</p>
+                </li>
+            </a>
+            <a href="index.php?m=default&amp;c=flow&amp;a=cart">
+                <li class="col-sm-3 col-xs-3 col-md-3"><i style=" text-align: center;"><span
+                        class="glyphicon glyphicon-shopping-cart" style="font-size: 30px;"></span></i>
+
+                    <p class="text-center">购物车</p>
+                </li>
+            </a>
+            <a href="index.php?m=default&amp;c=user">
+                <li class="col-sm-3 col-xs-3 col-md-3"><i style=" text-align: center;"><span
+                        class="glyphicon glyphicon-user" style="font-size: 30px;"></span></i>
+
+                    <p class="text-center">个人中心</p>
+                </li>
+            </a>
+        </ul>
+    </nav>
+
+    <!-- 热门推荐 -->
+    <div class="panel panel-default ect-margin-tb">
+        <div class="panel-heading">热门商品</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="images/463471251.jpeg"/>
+                        <div class="caption">
+                            <p class="productName_2"><span>产品名称1</span></p>
+                            <p class="pro-display-price">¥<span>25.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="images/463447134.jpeg"/>
+                        <div class="caption">
+                            <p class="productName_2"><span>产品名称2</span></p>
+                            <p class="pro-display-price">¥<span>250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="images/463460969.jpeg"/>
+                        <div class="caption">
+                            <p class="productName_2"><span>产品名称3</span></p>
+                            <p class="pro-display-price">¥<span>2500.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="images/463331794.jpeg"/>
+                        <div class="caption">
+                            <p class="productName_2"><span>产品名称4</span></p>
+                            <p class="pro-display-price">¥<span>25000.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="images/463123367.jpeg"/>
+                        <div class="caption">
+                            <p class="productName_2"><span>产品名称5</span></p>
+                            <p class="pro-display-price">¥<span>250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="images/462801175.jpeg"/>
+                        <div class="caption">
+                            <p class="productName_2"><span>产品名称6</span></p>
+                            <p class="pro-display-price">¥<span>250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 热门活动 -->
+    <div class="panel panel-default ect-margin-tb">
+        <div class="panel-heading">热门活动</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 hot-recommended">
+                    <div><img class="img-responsive" src="images/462540708.jpeg"/></div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 hot-recommended">
+                    <div><img class="img-responsive" src="images/462893696.jpeg"/></div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 hot-recommended">
+                    <div><img class="img-responsive" src="images/463331794.jpeg"/></div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 hot-recommended">
+                    <div><img class="img-responsive" src="images/463250754.jpeg"/></div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 hot-recommended">
+                    <div><img class="img-responsive" src="images/463318811.jpeg"/></div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 hot-recommended">
+                    <div><img class="img-responsive" src="images/462631091.jpeg"/></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录、注册栏 -->
+    <div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div style="text-align: center;" class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-2 col-md-offset-2"><a
+                            href="userLogin.html">登录</a></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4"><a href="userRegister.html">注册</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部悬浮栏 -->
+    <div>
+        <footer>
+            <nav class="ect-nav">
+                <ul class="ect-diaplay-box text-center">
+                    <li class="ect-box-flex"><a href="index.html"><i class="ect-icon ect-icon-home"><span
+                            class="ect-icon glyphicon glyphicon-home" style="font-size: 24px;"></span></i>首页</a></li>
+                    <li class="ect-box-flex"><a href="category.html"><i class="ect-icon ect-icon-cate"><span
+                            class="ect-icon glyphicon glyphicon-th-list" style="font-size: 24px;"></span></i>分类</a></li>
+                    <li class="ect-box-flex"><a href="shoppingCart.html"><i class="ect-icon ect-icon-flow"><span
+                            class="ect-icon glyphicon glyphicon-shopping-cart"
+                            style="font-size: 24px;"></span></i>购物车</a></li>
+                    <li class="ect-box-flex"><a href="home.html"><i class="ect-icon ect-icon-user"><span
+                            class="ect-icon glyphicon glyphicon-user" style="font-size: 24px;"></span></i>个人中心</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <div style="padding-bottom:4.2em;"></div>
+    </div>
+
+</div>
+
+<!-- 搜索层 -->
+<div class="searchdiv" style="display:none;">
+    <!-- 顶部搜索框 -->
+    <div class="row">
+        <form action="" onsubmit="checkForm();">
+            <div class="input-group col-sm-12 col-xs-12 col-md-12"
+                 style="padding-left: 20px;padding-right: 20px;padding-bottom: 5px;padding-top: 5px;">
+                <button type="submit" class="btn btn-default" style="display: none;">Submit</button>
+                <input type="text" class="form-control" onClick="javascript:openSearch();" placeholder="Search"
+                       aria-describedby="basic-addon1">
+                <span class="input-group-addon" onclick="javascript:closeSearch();">取消</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- 回到顶部按钮 -->
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 10; display: none;"><span
+        class="glyphicon glyphicon-chevron-up"></span></a>
+<style>
+
+</style>
+<!-- Swiper JS -->
+<script type="text/javascript" src="common/js/swiper.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.json.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+<script type="text/javascript" src="common/js/jquery.more.js"></script>
+<script type="text/javascript" src="common/js/utils.js"></script>
+<script src="themes/default/js/TouchSlide.1.1.js"></script>
+<script src="themes/default/js/ectouch.js"></script>
+<script src="themes/default/js/simple-inheritance.min.js"></script>
+<script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+<script src="common/bootstrap/js/bootstrap.min.js"></script>
+<script src="themes/default/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript" src="common/js/validform.js"></script>
+<script language="javascript">
+    <!-- Initialize Swiper幻灯片 -->
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 2000,
+        autoplayDisableOnInteraction: false
+    });
+
+    /*弹出评论层并隐藏其他层*/
+    function openSearch() {
+        if ($(".con").is(":visible")) {
+            $(".con").hide();
+            $(".searchdiv").show();
+        }
+    }
+    function closeSearch() {
+        if ($(".con").is(":hidden")) {
+            $(".con").show();
+            $(".searchdiv").hide();
+        }
+    }
+    function checkForm() {
+        alert(555);
+    }
+    function toCategory() {
+        window.location.href = "category.html";
+    }
+</script>
+<script type="text/javascript">
+    get_asynclist("/v1/index.php?m=default&c=index&a=ajax_goods&type=best", '/v1/themes/default/images/loader.gif');
+</script>
+</body>
+</html>

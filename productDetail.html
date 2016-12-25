@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--商品详情</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/swiper.min.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+    <style type="text/css">
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-container img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .hot-recommended {
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        .hot-recommended img {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- 模态框（Modal） -->
+<div id="myModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+     style="top:50%;" align="center">
+    <div class="modal-dialog modal-sm" style="width: 80px;">
+        <div class="modal-content">
+            <span>添加成功</span>
+        </div>
+    </div>
+</div>
+
+<div class="con">
+
+    <!-- Swiper幻灯片 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/462487379.jpeg"/></div>
+            <div class="swiper-slide"><img src="images/462488333.jpeg"/></div>
+            <div class="swiper-slide"><img src="images/462491482.jpeg"/></div>
+            <div class="swiper-slide"><img src="images/462513944.jpeg"/></div>
+            <div class="swiper-slide"><img src="images/462691973.jpeg"/></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <hr style="margin-top: 10px; margin-bottom: 10px;">
+    <!-- 商品名称 -->
+    <div style="padding-left: 10px; padding-right: 10px;">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-xs-12" style="float: left;"><h5>商品名称</h5></div>
+            <!--<div class="col-md-1 col-sm-1 col-xs-1" style="float: right; padding-left: 0;"><span class="glyphicon glyphicon-star-empty" style="font-size: 20px;"></span>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <br>
+    <!-- 价格&评论 -->
+    <div style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+        <div style="float: left;"><p>价格：<span style="color: red; font-size: 16px; font-weight: 700;">¥30.0</span></p>
+        </div>
+        <div style="float: right;"><p class="text-muted">评价：20条</p></div>
+    </div>
+    <hr/>
+
+    <!-- 数量 -->
+    <div style="padding-left: 10px; padding-right: 10px;">
+        <span class="pull-left" style="padding-top: 5px;">数量：</span>
+
+        <div class="input-group pull-left wrap"><span class="input-group-addon sup" onclick="changePrice('1')">-</span>
+            <input type="text" class="form-contro form-num" name="number" id="goods_number" autocomplete="off" value="1"
+                   onfocus="back_goods_number()" onblur="changePrice('2')" readonly="true">
+            <span class="input-group-addon plus" onclick="changePrice('3')">+</span>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- 店铺链接 -->
+    <div class="row panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-2 col-sm-2 col-md-2">logo</div>
+            <div class="col-xs-7 col-sm-7 col-md-7">店铺名称</div>
+            <div class="col-xs-3 col-sm-3 col-md-3" style="padding-left: 0px;">进入店铺<span
+                    class="glyphicon glyphicon-chevron-right" style="float: right;"></span></div>
+        </div>
+    </div>
+
+    <!-- 产品详情 -->
+    <div class="row panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-10 col-sm-10 col-md-10"><span>产品详情</span></div>
+            <div class="col-xs-2 col-sm-2 col-md-2"><span class="glyphicon glyphicon-chevron-right"
+                                                          style="float: right;"></span></div>
+        </div>
+    </div>
+
+
+    <!-- 评价 -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><span>评价</span>&nbsp;&nbsp;<span
+                style="font-size: 12px; color: red; font-weight: 700;">好评：90%</span><span
+                class="pull-right glyphicon glyphicon-chevron-right"></span><span class="pull-right">共300条评价&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        <div class="panel-body">
+            <!-- 产品评论展示 -->
+            <!-- 建议在商品详情页只展示最新3条 -->
+            <div>
+                <!-- 用户和发表评论的时间 -->
+                <div><span>Tom</span><span class="pull-right">2015-09-30</span></div>
+                <!-- 评论内容 -->
+                <div><p>商品评价这个产品非常好，吃了它，腰不酸，腿不疼，走路更有劲。呃呃呃，这样子吹自己的产品真的好吗？</p></div>
+                <hr style="margin-bottom: 5px;"/>
+            </div>
+            <div class="row"><a class="col-xs-12 col-sm-12 col-md-12" href="#"
+                                style="margin-left: auto; margin-right: auto; text-align: center;">查看更多</a></div>
+        </div>
+    </div>
+
+    <!-- 底部悬浮栏 -->
+    <div>
+        <footer>
+            <nav class="ect-nav">
+                <ul class="ect-diaplay-box text-center">
+                    <li class="ect-box-flex"><a href="#" onclick="javascript:collectProduct();"><i
+                            class="ect-icon ect-icon-home"><span class="ect-icon glyphicon glyphicon-star-empty"
+                                                                 style="font-size: 24px;"></span></i>收藏</a></li>
+                    <li class="ect-box-flex"><a href="index.html"><i class="ect-icon ect-icon-home"><span
+                            class="ect-icon glyphicon glyphicon-shopping-cart"
+                            style="font-size: 24px;"></span></i>购物车<span class="badge"><div id="productNumber">4
+                    </div></span></a></li>
+                    <li class="ect-box-flex"><a type="button" onclick="javascript:changeshocartpronum();"
+                                                class="btn btn-primary btn-danger" data-toggle="modal"
+                                                data-target=".bs-example-modal-sm" style="margin-top: 0.8em;"><span>加入购物车</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+        <div style="padding-bottom:4.2em;"></div>
+    </div>
+
+</div>
+
+
+<!-- Swiper JS -->
+<script type="text/javascript" src="common/js/swiper.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.json.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+<script type="text/javascript" src="common/js/jquery.more.js"></script>
+<script type="text/javascript" src="common/js/utils.js"></script>
+<script src="themes/default/js/TouchSlide.1.1.js"></script>
+<script src="themes/default/js/ectouch.js"></script>
+<script src="themes/default/js/simple-inheritance.min.js"></script>
+<script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+<script src="common/bootstrap/js/bootstrap.min.js"></script>
+<script src="themes/default/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript" src="common/js/validform.js"></script>
+<script type="text/javascript">
+    <!-- Initialize Swiper幻灯片 -->
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 2000,
+        autoplayDisableOnInteraction: false
+    });
+
+    <!-- 修改商品数量 -->
+    function changePrice(type) {
+        var qty = $("#goods_number").val();
+        if (type == 1) {
+            qty--;
+        }
+        if (type == 3) {
+            qty++;
+        }
+        if (qty <= 0) {
+            qty = 1;
+        }
+        if (!/^[0-9]*$/.test(qty)) {
+            qty = $("#back_number").value;
+        }
+        document.getElementById('goods_number').value = qty;
+    }
+
+    <!-- 自动隐藏提示信息 -->
+    $("#myModal").on("shown.bs.modal", function () {
+        setTimeout(function () {
+            $("#myModal").modal("hide")
+        }, 1000);
+    })
+
+    <!-- 修改购物车数量 -->
+    function changeshocartpronum() {
+        var num = $("#productNumber").html();
+        var number = $("#goods_number").val();
+        number = parseInt(num) + parseInt(number);
+        $("#productNumber").html(number);
+    }
+
+</script>
+</body>
+</html>
+

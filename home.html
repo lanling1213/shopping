@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--个人中心</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <style type="text/css">
+        .head-img img {
+            width: 100%;
+            height: 60px;
+        }
+
+        .head-img {
+            padding-left: 4px;
+            padding-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div class="con">
+    <!-- 个人基本信息 -->
+    <div class="row">
+        <div class="col-sm-6 col-xs-6 col-md-6" style="padding-top: 5px;">
+            <div class="col-sm-6 col-xs-6 col-md-6 head-img"><img src="images/462705862.jpeg" class="img-circle"/></div>
+            <div class="col-sm-4 col-xs-4 col-md-4" style="padding-top: 15px;">Alice</div>
+        </div>
+        <div class="col-sm-6 col-xs-6 col-md-6 text-right"
+             style="padding-top: 20px; padding-right: 35px;"><span class="glyphicon glyphicon-chevron-right" style="font-size: 25px;"></span>
+        </div>
+    </div>
+    <div>
+        <hr/>
+    </div>
+    <!-- 订单栏 -->
+    <nav class="container-fluid">
+        <ul class="row ect-row-nav">
+            <a href="index.php?m=default&amp;c=brand">
+                <li class="col-sm-3 col-xs-3 col-md-3"><i style=" text-align: center;"><span
+                        class="glyphicon glyphicon-list-alt" style="font-size: 30px;"></span></i>
+
+                    <p class="text-center">全部订单</p>
+                </li>
+            </a>
+            <a href="#">
+                <li class="col-sm-3 col-xs-3 col-md-3"><i style=" text-align: center;"><span
+                        class="glyphicon glyphicon-usd" style="font-size: 30px;"></span></i>
+
+                    <p class="text-center">待付款</p>
+                </li>
+            </a>
+            <a href="index.php?m=default&amp;c=flow&amp;a=cart">
+                <li class="col-sm-3 col-xs-3 col-md-3"><i style=" text-align: center;"><span
+                        class="glyphicon glyphicon-plane" style="font-size: 30px;"></span></i>
+
+                    <p class="text-center">待收货</p>
+                </li>
+            </a>
+            <a href="index.php?m=default&amp;c=user">
+                <li class="col-sm-3 col-xs-3 col-md-3"><i style=" text-align: center;"><span
+                        class="glyphicon glyphicon-refresh" style="font-size: 30px;"></span></i>
+
+                    <p class="text-center">退换货</p>
+                </li>
+            </a>
+        </ul>
+    </nav>
+    <br>
+    <!-- 功能菜单栏 -->
+    <div class="list-group">
+        <a href="#" class="list-group-item">我的购物车<span class="glyphicon glyphicon-chevron-right"
+                                                       style="float: right;"></span></a>
+        <a href="#" class="list-group-item">我的收藏<span class="glyphicon glyphicon-chevron-right"
+                                                      style="float: right;"></span></a>
+        <a href="#" class="list-group-item">收货地址<span class="glyphicon glyphicon-chevron-right"
+                                                      style="float: right;"></span></a>
+        <a href="#" class="list-group-item">登录密码<span class="glyphicon glyphicon-chevron-right"
+                                                      style="float: right;"></span></a>
+        <a href="#" class="list-group-item">支付密码<span class="glyphicon glyphicon-chevron-right"
+                                                      style="float: right;"></span></a>
+    </div>
+
+    <div>
+        <!-- 底部悬浮栏 -->
+        <footer>
+            <nav class="ect-nav">
+                <ul class="ect-diaplay-box text-center">
+                    <li class="ect-box-flex"><a href="index.html"><i class="ect-icon ect-icon-home"><span
+                            class="ect-icon glyphicon glyphicon-home" style="font-size: 24px;"></span></i>首页</a></li>
+                    <li class="ect-box-flex"><a href="category.html"><i class="ect-icon ect-icon-cate"><span
+                            class="ect-icon glyphicon glyphicon-th-list" style="font-size: 24px;"></span></i>分类</a></li>
+                    <li class="ect-box-flex"><a href="shoppingCart.html"><i class="ect-icon ect-icon-flow"><span
+                            class="ect-icon glyphicon glyphicon-shopping-cart"
+                            style="font-size: 24px;"></span></i>购物车</a></li>
+                    <li class="ect-box-flex"><a href="home.html"><i class="ect-icon ect-icon-user"><span
+                            class="ect-icon glyphicon glyphicon-user" style="font-size: 24px;"></span></i>个人中心</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <div style="padding-bottom:4.2em;"></div>
+    </div>
+</div>
+<style>
+    #scrollUp {
+        border-radius: 100%;
+        background-color: #777;
+        color: #eee;
+        font-size: 40px;
+        line-height: 1;
+        text-align: center;
+        text-decoration: none;
+        bottom: 1em;
+        right: 10px;
+        overflow: hidden;
+        width: 46px;
+        height: 46px;
+        border: none;
+        opacity: 0.6;
+    }
+</style>
+<script type="text/javascript" src="common/js/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.json.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+<script type="text/javascript" src="common/js/jquery.more.js"></script>
+<script type="text/javascript" src="common/js/utils.js"></script>
+<script src="themes/default/js/TouchSlide.1.1.js"></script>
+<script src="themes/default/js/ectouch.js"></script>
+<script src="themes/default/js/simple-inheritance.min.js"></script>
+<script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+<script src="common/bootstrap/js/bootstrap.min.js"></script>
+<script src="themes/default/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript" src="common/js/validform.js"></script>
+
+</body>
+</html>

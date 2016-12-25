@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--店铺产品</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/swiper.min.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+
+    <script type="text/javascript" src="common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="common/js/jquery.json.js"></script>
+    <script type="text/javascript" src="common/js/common.js"></script>
+    <script type="text/javascript" src="common/js/jquery.more.js"></script>
+    <script type="text/javascript" src="common/js/utils.js"></script>
+    <script src="themes/default/js/TouchSlide.1.1.js"></script>
+    <script src="themes/default/js/ectouch.js"></script>
+    <script src="themes/default/js/simple-inheritance.min.js"></script>
+    <script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+    <script src="common/bootstrap/js/bootstrap.min.js"></script>
+    <script src="themes/default/js/jquery.scrollUp.min.js"></script>
+    <script type="text/javascript" src="common/js/validform.js"></script>
+    <script src="common/bootstrap/js/bootstrapValidator.js"></script>
+
+    <style type="text/css" media="all">
+        .merchantLogo img{
+            width: 7rem;
+            height: 2rem;
+            position: absolute;
+            top: 0;
+        }
+
+        .hot-recommended {
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        .hot-recommended img {
+            width: 100%;
+            height: 170px;
+        }
+
+        .thumbnail{
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="con">
+    <!-- 顶部 -->
+    <div class="panel panel-default" style="margin-bottom: 0; border: 0;">
+        <div class="panel-heading">
+            <div class="text-center">
+                <span style="font-size: 16px;">店铺名称</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分类栏 -->
+    <div class="panel-heading col-sm-12 col-xs-12 col-md-12"
+         style="padding: 0; font-size: 14px;">
+        <nav class="ect-nav" style="height: 3em;">
+            <ul class="ect-diaplay-box text-center nav nav-pills">
+                <li role="presentation" class="ect-box-flex"><a href="#" id="all"><span>全部产品</span></a></li>
+                <li role="presentation" class="ect-box-flex"><a href="#" id="hot"><span>热销</span></a></li>
+                <li role="presentation" class="ect-box-flex"><a href="#" id="new"><span>新品</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- 产品列表 -->
+    <!-- 建议每页取10条数据 -->
+    <div class="panel panel-default ect-margin-tb">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <a href="#">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="images/463471251.jpeg"/>
+                            <div class="caption">
+                                <p class="productName_2"><span>产品名称1</span></p>
+                                <p class="pro-display-price">¥<span>25.00</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <a href="#">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="images/463447134.jpeg"/>
+                            <div class="caption">
+                                <p class="productName_2"><span>产品名称2</span></p>
+                                <p class="pro-display-price">¥<span>250.00</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <a href="#">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="images/463460969.jpeg"/>
+                            <div class="caption">
+                                <p class="productName_2"><span>产品名称3</span></p>
+                                <p class="pro-display-price">¥<span>2500.00</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 hot-recommended">
+                    <a href="#">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="images/463331794.jpeg"/>
+                            <div class="caption">
+                                <p class="productName_2"><span>产品名称4</span></p>
+                                <p class="pro-display-price">¥<span>25000.00</span></p>
+                            </div>
+                        </div>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分页栏 -->
+    <div class="panel panel-default">
+        <div class="panel-heading text-center row" style="font-size: 14px;">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <a href="#">上一页</a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <a href="#"><span>1</span>/<span>4</span></a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <a href="#">下一页</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 回到顶部按钮 -->
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 10; display: none;"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<script type="text/javascript">
+    $(function(){
+        $("#all").css("color", "red");
+
+        $("#hot").click(function(){
+            $("#all").removeAttr("style");
+            $("#new").removeAttr("style");
+            $("#hot").css("color", "red");
+        });
+        $("#new").click(function(){
+            $("#all").removeAttr("style");
+            $("#hot").removeAttr("style");
+            $("#new").css("color", "red");
+        });
+        $("#all").click(function(){
+            $("#hot").removeAttr("style");
+            $("#new").removeAttr("style");
+            $("#all").css("color", "red");
+        });
+    });
+
+</script>
+</body>
+</html>

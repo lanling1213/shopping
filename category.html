@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--商品目录</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/accordion.css" media="screen" type="text/css"/>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="con">
+    <!-- 顶部搜索框 -->
+    <div class="row">
+        <div class="input-group col-sm-12 col-xs-12 col-md-12"
+             style="padding-left: 20px;padding-right: 20px;padding-bottom: 5px;padding-top: 5px;">
+            <span class="input-group-addon" id="basic-addon1" style="display: none;"><span
+                    class="glyphicon glyphicon-th-list"></span></span>
+            <input type="text" class="form-control" onClick="javascript:openSearch();" placeholder="Search"
+                   aria-describedby="basic-addon1"/>
+        </div>
+    </div>
+    <!-- 商品目录 -->
+    <div>
+        <ul id="accordion" class="accordion">
+            <!-- 以此<li>为模板循环遍历 -->
+            <li>
+                <!-- 一级分类 -->
+                <div class="link"></i>Dise?o web<i class="fa fa-chevron-down"></i></div>
+                <!-- 二级分类 -->
+                <ul class="submenu">
+                    <li><a href="#">Photoshop</a></li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Maquetacion web</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"></i>Desarrollo front-end<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">Frameworks javascript</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"></i>Dise?o responsive<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Dispositivos mobiles</a></li>
+                    <li><a href="#">Medios de escritorio</a></li>
+                    <li><a href="#">Otros dispositivos</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="link"></i>Posicionamiento web<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Bing</a></li>
+                    <li><a href="#">Yahoo</a></li>
+                    <li><a href="#">Otros buscadores</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 底部悬浮栏 -->
+    <div>
+        <footer>
+            <nav class="ect-nav">
+                <ul class="ect-diaplay-box text-center">
+                    <li class="ect-box-flex"><a href="index.html"><i class="ect-icon ect-icon-home"><span
+                            class="ect-icon glyphicon glyphicon-home" style="font-size: 24px;"></span></i>首页</a></li>
+                    <li class="ect-box-flex"><a href="category.html"><i class="ect-icon ect-icon-cate"><span
+                            class="ect-icon glyphicon glyphicon-th-list" style="font-size: 24px;"></span></i>分类</a></li>
+                    <li class="ect-box-flex"><a href="shoppingCart.html"><i class="ect-icon ect-icon-flow"><span
+                            class="ect-icon glyphicon glyphicon-shopping-cart"
+                            style="font-size: 24px;"></span></i>购物车</a></li>
+                    <li class="ect-box-flex"><a href="home.html"><i class="ect-icon ect-icon-user"><span
+                            class="ect-icon glyphicon glyphicon-user" style="font-size: 24px;"></span></i>个人中心</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <div style="padding-bottom:4.2em;"></div>
+    </div>
+</div>
+<!-- 搜索层 -->
+<div class="search" style="display:none;">
+    <!-- 顶部搜索框 -->
+    <div class="row">
+        <form action="" onsubmit="checkForm();">
+            <div class="input-group col-sm-12 col-xs-12 col-md-12"
+                 style="padding-left: 20px;padding-right: 20px;padding-bottom: 5px;padding-top: 5px;">
+                <button type="submit" class="btn btn-default" style="display: none;">Submit</button>
+                <input type="text" class="form-control" onClick="javascript:openSearch();" placeholder="Search"
+                       aria-describedby="basic-addon1">
+                <span class="input-group-addon" onclick="javascript:closeSearch();">取消</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    #scrollUp {
+        border-radius: 100%;
+        background-color: #777;
+        color: #eee;
+        font-size: 40px;
+        line-height: 1;
+        text-align: center;
+        text-decoration: none;
+        bottom: 1em;
+        right: 10px;
+        overflow: hidden;
+        width: 46px;
+        height: 46px;
+        border: none;
+        opacity: 0.6;
+    }
+</style>
+<script type="text/javascript" src="common/js/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.json.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+<script type="text/javascript" src="common/js/jquery.more.js"></script>
+<script type="text/javascript" src="common/js/utils.js"></script>
+<script src="themes/default/js/TouchSlide.1.1.js"></script>
+<script src="themes/default/js/ectouch.js"></script>
+<script src="themes/default/js/simple-inheritance.min.js"></script>
+<script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+<script src="common/bootstrap/js/bootstrap.min.js"></script>
+<script src="themes/default/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript" src="common/js/validform.js"></script>
+<script src="themes/default/js/accordion.js"></script>
+<script language="javascript">
+    /*弹出评论层并隐藏其他层*/
+    function openSearch() {
+        if ($(".con").is(":visible")) {
+            $(".con").hide();
+            $(".search").show();
+        }
+    }
+    function closeSearch() {
+        if ($(".con").is(":hidden")) {
+            $(".con").show();
+            $(".search").hide();
+        }
+    }
+    function checkForm() {
+        alert(555);
+    }
+</script>
+</body>
+</html>

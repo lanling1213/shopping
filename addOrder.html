@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--确认订单</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+
+    <style type="text/css">
+        .productImg img {
+            width: 61px;
+            height: 61px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="con">
+    <!-- 确认订单栏 -->
+    <div class="panel panel-default text-center">
+        <div class="panel-heading">
+            <p><h4>确认订单</h4></p>
+        </div>
+    </div>
+    <!-- 收货地址 -->
+    <div class="panel panel-default" style="display: block;">
+        <div class="panel-body row">
+            <a href="#">
+                <div class="col-sm-10 col-xs-10 col-md-10">
+                    <div>
+                        <p class="text-muted">
+                            <small>广东省深圳市南山区</small>
+                        </p>
+                    </div>
+                    <div><p class="text-muted"><span class="small">张三</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="small">13711111111</span>
+                    </p></div>
+                </div>
+                <div class="col-sm-2 col-xs-2 col-md-2" style="padding-top: 0.2em;"><span style="font-size: 20px;" class="glyphicon glyphicon-menu-right"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 添加收货地址 -->
+    <!-- 如果用户收货地址为空，显示此<div> -->
+    <div class="panel panel-default" style="display: none;">
+        <div class="panel-body row">
+            <a href="#">
+                <div class="col-sm-10 col-xs-10 col-md-10"><h4>新增收货地址</h4></div>
+                <div class="col-sm-2 col-xs-2 col-md-2" style="padding-top: 0.2em;"><span style="font-size: 20px;" class="glyphicon glyphicon-menu-right"></span></div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 商品列表 -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            商品列表
+        </div>
+
+        <ul class="list-group">
+            <!-- 建议以此<li>为模板循环遍历 -->
+            <li class="list-group-item">
+                <div class="row">
+                    <!-- 图片 -->
+                    <div class="productImg col-sm-3 col-xs-3 col-md-3"><img src="images/463303061.jpeg"/></div>
+                    <!-- 名称 -->
+                    <div class="col-sm-6 col-xs-6 col-md-6 productName_3">商品名称这是个商品的名称只是一个很普通商品名称而已，真的吗确定吗真心不骗人</div>
+                    <!-- 价格 -->
+                    <div class="col-sm-3 col-xs-3 col-md-3">
+                        <div><span style="color: red;">9.99</span></div>
+                        <div>x<span>2</span></div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <!-- 图片 -->
+                    <div class="productImg col-sm-3 col-xs-3 col-md-3"><img src="images/463303061.jpeg"/></div>
+                    <!-- 名称 -->
+                    <div class="col-sm-6 col-xs-6 col-md-6">商品名称这是个很有用的商品，用了他，啥都不是事儿</div>
+                    <!-- 价格 -->
+                    <div class="col-sm-3 col-xs-3 col-md-3">30.00x2</div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <!-- 图片 -->
+                    <div class="productImg col-sm-3 col-xs-3 col-md-3"><img src="images/463303061.jpeg"/></div>
+                    <!-- 名称 -->
+                    <div class="col-sm-6 col-xs-6 col-md-6">商品名称这是个很有用的商品，用了他，啥都不是事儿</div>
+                    <!-- 价格 -->
+                    <div class="col-sm-3 col-xs-3 col-md-3">30.00x2</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 总价&支付方式 -->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div><p class="text-center">总价：<span style="color: red;">336.00</span></p></div>
+            <div>
+                <button type="button" class="btn btn-success btn-block">微信支付</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+

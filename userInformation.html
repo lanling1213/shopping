@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="最特产"/>
+    <meta name="Description" content="最特产"/>
+    <title>最特产--修改信息</title>
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="common/bootstrap/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="themes/default/css/ectouch_purple.css">
+    <link rel="stylesheet" href="themes/default/css/photoswipe.css">
+    <link rel="stylesheet" href="themes/default/css/swiper.min.css">
+    <link rel="stylesheet" href="themes/default/css/style.css">
+
+    <script type="text/javascript" src="common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="common/js/jquery.json.js"></script>
+    <script type="text/javascript" src="common/js/common.js"></script>
+    <script type="text/javascript" src="common/js/jquery.more.js"></script>
+    <script type="text/javascript" src="common/js/utils.js"></script>
+    <script src="themes/default/js/TouchSlide.1.1.js"></script>
+    <script src="themes/default/js/ectouch.js"></script>
+    <script src="themes/default/js/simple-inheritance.min.js"></script>
+    <script src="themes/default/js/code-photoswipe-1.0.11.min.js"></script>
+    <script src="common/bootstrap/js/bootstrap.min.js"></script>
+    <script src="themes/default/js/jquery.scrollUp.min.js"></script>
+    <script type="text/javascript" src="common/js/validform.js"></script>
+    <script src="common/bootstrap/js/bootstrapValidator.js"></script>
+
+    <style type="text/css" media="all">
+
+    </style>
+</head>
+<body>
+<div class="con">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="text-align: center;"><p><h4>个人信息</h4></p></div>
+        <div class="panel-body">
+            <form id="updateForm">
+                <div class="form-group">
+                    <label for="username">昵称</label>
+                    <input type="text" class="form-control" id="username" placeholder="请输入昵称" name="username"
+                           value="张三">
+                </div>
+                <div class="form-group">
+                    <label for="phone">手机号</label>
+                    <input type="text" class="form-control" id="phone" placeholder="请输入手机号" name="phone"
+                           value="13711111111">
+                </div>
+                <div class="form-group">
+                    <label for="Name">真实姓名</label>
+                    <input type="text" class="form-control" id="Name" placeholder="请输入真实姓名" name="Name" value="张三">
+                </div>
+                <div class="form-group">
+                    <label for="cid">身份证号</label>
+                    <input type="text" class="form-control" id="cid" placeholder="请输入身份证号" name="cid"
+                           value="123456789987654321">
+                </div>
+                <button type="submit" class="btn btn-default btn-block">修改信息</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#loginForm').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                phone: {
+                    validators: {
+                        notEmpty: {
+                            message: '手机号不能为空'
+                        },
+                        digits: {
+                            message: '手机号只能为数字'
+                        }
+                    }
+                },
+                pwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '密码不能为空'
+                        }
+                    }
+                },
+            }
+        });
+    });
+</script>
+</body>
+</html>
